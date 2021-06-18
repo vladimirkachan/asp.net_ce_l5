@@ -1,0 +1,17 @@
+﻿@using _04_CodeInsertions.Models
+@model List<PlainModel>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/style.css" rel="stylesheet" />
+    <title>Companies</title>
+</head>
+<body>
+    @foreach (var m in Model)
+    {
+        <h1>@m.Company</h1>
+        <h2>Employees: @m.Employees</h2>
+        <h2>Total Salary: @(m.Salary * m.Employees)</h2>
+    }
+</body>
+</html>
